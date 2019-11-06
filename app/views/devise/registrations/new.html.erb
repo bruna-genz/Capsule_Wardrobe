@@ -1,10 +1,9 @@
 <div class="container" id="sign-up-form">
-  <div class="row">
-    <h1>Get in touch with like-minded people</h1>
-    <h3>Create, study, accomplish goals together</h3>
-
-    <div class="col-sm-offset-4 col-sm-4">
-      <h3>Sign up <small>it's free!</small></h3> 
+<h4>Bring more practicality and sustainability to your wardrope</h4>
+  <div class="row d-flex justify-content-center">
+    
+    <div class="col-sm-offset-4 col-sm-4 mt-4">
+      <h2 class="mb-3">Sign up <small>it's free!</small></h3> 
 
         <%= bootstrap_form_for(resource, 
                        :as => resource_name, 
@@ -22,7 +21,7 @@
           <%= f.password_field :password_confirmation, 
                        placeholder: 'password confirmation', 
                        class: 'form-control' %>
-          <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
+          <%= f.submit 'Sign up', class: 'btn sign-up-button btn-outline-secondary' %>
         <% end %>
     </div>
   </div>
