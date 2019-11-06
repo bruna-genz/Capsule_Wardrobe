@@ -1,0 +1,9 @@
+// this is gonna have style for the navbar
+
+.navbar {
+  background: $navbarColor !important;
+  border: none;
+  a {
+    color: white !important;
+  }
+}
