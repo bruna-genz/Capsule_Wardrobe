@@ -11,17 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  */
-
-// Variables 
-@import "base/variables";
-
-// Default styles
-@import "base/default";
-
-// Partials - main css files
-@import "partials/*";
-@import "partials/layout/*";
-
 // Bootstrap
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+// Variables 
+//@import "base/variables";
+
+// Default styles
+//@import "base/default";
+
+// Partials - main css files
+//@import "partials/*";
+//@import "partials/layout/*";
+
