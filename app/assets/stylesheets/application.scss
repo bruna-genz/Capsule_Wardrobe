@@ -12,15 +12,16 @@
  *
  */
 
- // Bootstrap
- @import "bootstrap";
+// Variables 
+@import "base/variables";
 
- // Variables 
- @import "base/variables";
+// Default styles
+@import "base/default";
 
- // Default styles
- @import "base/default";
+// Partials - main css files
+@import "partials/*";
+@import "partials/layout/*";
 
- // Partials - main css files
- @import "partials/*";
- @import "partials/layout/*";
+// Bootstrap
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";

@@ -3,9 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+# Bootsrap
 gem 'bootstrap', '~> 4.3.1'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'devise'
 gem 'bootstrap_form'
 
