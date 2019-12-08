@@ -1,13 +1,13 @@
 <div class="container" id="sign-up-form">
-<h4>Bring more practicality and sustainability to your wardrope</h4>
   <div class="row d-flex justify-content-center">
-    
-    <div class="col-sm-offset-4 col-sm-4 mt-4">
-      <h2 class="mb-3">Sign up <small>it's free!</small></h3> 
+    <div class="col-sm-6 col-sm-offset-3 mt-5">
+      <h2 class="text-center title-medium mt-5 mb-5">Sign up</h3> 
 
         <%= bootstrap_form_for(resource, 
                        :as => resource_name, 
                        :url => registration_path(resource_name)) do |f| %>
+          
+          <%= render "devise/shared/error_messages", resource: resource %>
 
           <%= f.text_field :name, 
 	           placeholder: 'username (will be shown publicly)', 
@@ -21,7 +21,7 @@
           <%= f.password_field :password_confirmation, 
                        placeholder: 'password confirmation', 
                        class: 'form-control' %>
-          <%= f.submit 'Sign up', class: 'btn sign-up-button btn-outline-secondary' %>
+          <%= f.submit 'Sign up', class: 'btn sign-up-button btn-outline-secondary w-100' %>
         <% end %>
     </div>
   </div>

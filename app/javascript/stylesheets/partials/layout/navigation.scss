@@ -1,10 +1,18 @@
-// this is gonna have style for the navbar
+@import "../../base/variables.scss";
 
 .navbar {
-  background: $navbarColor !important;
-  border: none;
-  a {
-    color: white !important;
+  height: 90px;
+  background-color: $wine;
+  box-shadow: 0 3px 3px -2px rgba(26, 23, 23, 0.781);
+  .white-link {
+    color: $lightgray !important;
+  }
+  .navbar-brand {
+    font-family: $logo-font;
+    font-size: 40px;
   }
 }
 
+.dropdown-item {
+  color: $wine !important;
+}

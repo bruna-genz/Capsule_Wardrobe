@@ -1,8 +1,7 @@
 <div class="container" id="sign-up-form">
-  <div class="row d-flex justify-content-center">
-    
-    <div class="col-sm-offset-4 col-sm-4 mt-4">
-      <h2 class="mb-3">Add something to your wardrope:</h3> 
+  <div class="row d-flex justify-content-center">  
+    <div class="col-sm-6 col-sm-offset-3 mt-5">
+      <h2 class="text-center title-small mt-5 mb-5">Add something to your wardrope:</h3> 
 
         <%= form_for @post do |f| %>
           <%= f.label "Title" %>
@@ -12,7 +11,7 @@
           <%= f.label "Piece of clothes" %>
           <%= f.file_field :picture,  
                            class: 'form-control' %>
-          <%= f.submit 'Create', class: 'btn sign-up-button btn-outline-secondary' %>
+          <%= f.submit 'Create', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
         <% end %>
     </div>
   </div>

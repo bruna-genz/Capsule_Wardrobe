@@ -1,15 +1,50 @@
+@import "variables.scss";
+
 * {
     box-sizing: border-box;
   }
   
 body {
-  margin-top: 50px;
+  margin-top: 90px !important;
+  font-family: $basic-font;
 }
 
-.jumbotron {
-  width: 80%;
-  height: 800px;
-  .container {
-    margin-top: 250px;
-  }
+/*    Titles and paragraphs   */
+
+.title-big {
+  font-family: $logo-font;
+  font-size: 90px;
+}
+
+.title-medium {
+  font-family: $logo-font;
+  font-size: 60px;
+}
+
+.title-small {
+  font-family: $logo-font;
+  font-size: 40px;
+}
+
+
+.subtitle {
+  font-family: $basic-font;
+  font-size: 30px;
+}
+
+.paragraph-big {
+  font-family: $basic-font;
+  font-size: 20px;
+}
+
+/*    Colors    */
+
+.wine {
+  color: $wine;
+}
+
+/*    Backgrounds     */
+
+.maroon-bg {
+  background-color: rgba(148, 123, 137, 0.589) !important;
 }
