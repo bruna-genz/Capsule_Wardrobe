@@ -1,36 +1,16 @@
-#main-content {
-    min-height: 800px;
-    margin: 0;
-    padding: 10px 0 0 0;
+.full-page {
+  height: 90vh;
+}
+
+.sidebar-sticky {
+  .big {
+    font-size: 20px;
   }
-  
-  #side-menu {
-    background-color: lightgrey;
-    padding: 0;
-    #links-list {
-      margin-top: 20px;
-      padding: 0;
-      font-size: 14px;
-      font-size: 1.4rem;
-      a {
-        display: block;
-        padding: 5px 15px;
-        margin: 2px 0;
-      }
-      li {
-        min-width: 195px;
-        max-width: 195px;
-      }
-      li, li a {
-        color: black;
-        text-decoration: none;
-      }
-      li:hover {
-        border-radius: 50px;
-        background: $navbarColor;
-      }
-      li:hover a, li:hover i {
-        color: white;
-      }
+  a {
+    color: black;
+    &:hover {
+      background-color: $hoverColor;
+      color: black;
     }
   }
+}
