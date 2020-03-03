@@ -11,6 +11,10 @@
           <%= f.label "Piece of clothes" %>
           <%= f.file_field :picture,  
                            class: 'form-control' %>
+
+          <%= f.label "Category:" %>
+          <%= f.select(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
+
           <%= f.submit 'Create', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
         <% end %>
     </div>
