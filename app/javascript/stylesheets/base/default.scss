@@ -51,7 +51,8 @@ body {
 /*    Forms     */
 
 #error_explanation,
-#flash_alert {
+#flash_alert,
+#flash_error {
   border: 2px rgb(180, 6, 6) solid;
     border-radius: 6px;
     padding: 5px 10px;

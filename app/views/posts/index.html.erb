@@ -6,19 +6,14 @@
 
         <!-- MAIN -->
         <div class="col pt-3">
-        
-            <h1>Posts</h1>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec dictum mauris, vitae consequat felis. Ut dignissim consequat nisl at elementum. Maecenas luctus erat id commodo feugiat. Integer dolor nibh, tincidunt sit amet pulvinar a, pretium id magna. Mauris vitae rutrum arcu. Etiam in placerat eros. Aenean eu ornare lorem. Nulla tortor risus, pulvinar nec blandit eget, imperdiet eu lectus. Integer efficitur felis dolor, id vehicula risus finibus nec. In placerat nulla faucibus, lacinia risus eget, convallis ligula. In hac habitasse platea dictumst. Praesent et pretium velit, ut tincidunt dui. Mauris scelerisque arcu imperdiet augue vehicula, in dictum odio facilisis.
-
-            Fusce ultricies molestie fringilla. Praesent nec justo mi. Donec lobortis in velit non ultrices. Maecenas mattis libero in urna bibendum rhoncus. Suspendisse tempus, ligula ac lobortis elementum, tortor metus aliquam enim, non facilisis sem elit in erat. Vestibulum non enim sed mauris ultricies efficitur a eu ipsum. Aenean nec congue ex, eget tincidunt justo. Proin vel dignissim turpis. Aenean sed varius dolor. Sed vitae lobortis ex. Duis placerat euismod ipsum, vel lobortis lacus.
-
-            Phasellus laoreet nunc vitae interdum hendrerit. Morbi in urna vel lorem convallis dapibus. Etiam dignissim pulvinar libero, et egestas sapien faucibus eget. Vestibulum viverra mollis magna, sed commodo felis ullamcorper quis. Duis gravida eleifend elit, vitae fermentum justo egestas tristique. Nunc rutrum elit non ligula ullamcorper, sed scelerisque elit tincidunt. Donec placerat, libero sit amet consequat lobortis, urna nisi aliquet libero, vitae laoreet tellus lacus in eros. Etiam dictum volutpat consequat.
-
-            Nulla dapibus sem sit amet felis elementum feugiat. Nullam porta urna ac nunc dictum, eu scelerisque leo mattis. Nulla at sem lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc dignissim nec diam non fringilla. Suspendisse porta, lectus in varius aliquet, nunc felis efficitur purus, eget malesuada arcu arcu at ipsum. Curabitur malesuada nunc odio, ut malesuada purus fringilla eu. Aliquam rhoncus sapien eu orci ornare, id blandit ex sagittis. Donec pulvinar eros laoreet augue lacinia facilisis. Morbi tempus eros non venenatis vulputate. Aenean vestibulum scelerisque ipsum non ultricies. Quisque hendrerit dolor eget congue tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque malesuada est ac libero finibus mollis.
-            </p>
-        
-
+            <ul>
+                <% @posts.each do |post| %>
+                    <li>
+                        <img src='<%=(url_for(post.picture)) %>'>
+                        <p><%= post.category.name %></p>
+                    </li>
+                <% end %>
+            </ul>
 
         </div><!-- Main Col END -->
         

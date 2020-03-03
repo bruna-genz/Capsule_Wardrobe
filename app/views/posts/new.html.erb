@@ -4,14 +4,13 @@
       <h2 class="text-center title-small mt-5 mb-5">Add something to your wardrope:</h3> 
 
         <%= form_for @post do |f| %>
-          <%= f.label "Title" %>
-          <%= f.text_field :title,
-                            class: 'form-control' %>
-          
+           <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+
           <%= f.label "Piece of clothes" %>
           <%= f.file_field :picture,  
                            class: 'form-control' %>
 
+          </br>
           <%= f.label "Category:" %>
           <%= f.select(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
 
