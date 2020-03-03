@@ -26,7 +26,6 @@ body {
   font-size: 40px;
 }
 
-
 .subtitle {
   font-family: $basic-font;
   font-size: 30px;
@@ -47,4 +46,18 @@ body {
 
 .maroon-bg {
   background-color: rgba(148, 123, 137, 0.589) !important;
+}
+
+#error_explanation,
+#flash_alert {
+  border: 2px rgb(180, 6, 6) solid;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  h2 {
+    font-size: 25px;
+  }
+  ul{
+    margin-bottom: 0;
+  }
 }
