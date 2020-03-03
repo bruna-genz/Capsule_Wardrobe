@@ -48,6 +48,8 @@ body {
   background-color: rgba(148, 123, 137, 0.589) !important;
 }
 
+/*    Forms     */
+
 #error_explanation,
 #flash_alert {
   border: 2px rgb(180, 6, 6) solid;
@@ -59,5 +61,20 @@ body {
   }
   ul{
     margin-bottom: 0;
+  }
+}
+
+#cancel-container {
+  display: flex;
+  margin-top: 22px;
+  p {
+    margin: 0;
+  }
+  #cancel-btn {
+    background-color: white;
+    border: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
