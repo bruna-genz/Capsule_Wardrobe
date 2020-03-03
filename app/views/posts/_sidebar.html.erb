@@ -7,38 +7,16 @@
     <ul class="nav flex-column">
         <li class="nav-item big d-flex justify-content-center pt-2">
             <p class="nav-link mb-0" href="#">
-                Categories
+                <Categories>
             </p>
         </li>
-        <li class="nav-item d-flex justify-content-center">
-            <a class="nav-link" href="#">
-                <img src="https://img.icons8.com/ios-filled/30/000000/womens-t-shirt.png">
-                Tops
-            </a>
-        </li>
-        <li class="nav-item d-flex justify-content-center">
-            <a class="nav-link" href="#">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/womens-pants.png">
-                Bottons
-            </a>
-        </li>
-        <li class="nav-item d-flex justify-content-center">
-            <a class="nav-link" href="#">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/jacket.png">
-                Jackets
-            </a>
-        </li>
-        <li class="nav-item  d-flex justify-content-center">
-            <a class="nav-link" href="#">
-                <img src="https://img.icons8.com/ios-filled/30/000000/slip-dress.png">
-                Dresses
-            </a>
-        </li>
-        <li class="nav-item big d-flex justify-content-center pb-2">
-            <a class="nav-link active" href="#">
-                See all 
-            </a>
-        </li>
+        <% Category.all.each do |category| %>
+            <li class="nav-item d-flex justify-content-center">
+                <a class="nav-link" href="#">
+                    <%= category.name %><span class="badge badge-secondary"><%= Category.find_by(name: category.name).posts.count %></span>
+                </a>
+            </li>
+        <% end %>
     </ul>
     <ul class="nav flex-column border-top border-secondary">
         <li class="nav-item big d-flex justify-content-center p-3">

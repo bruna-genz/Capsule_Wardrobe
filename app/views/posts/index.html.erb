@@ -1,23 +1,14 @@
 <div class="container-fluid full-page">
-  
-    <!-- Bootstrap row -->
     <div class="row h-100" id="body-row">
         <%= render "sidebar" %>
-
-        <!-- MAIN -->
         <div class="col pt-3">
-            <ul>
+            <ul id="images-container">
                 <% @posts.each do |post| %>
                     <li>
-                        <img src='<%=(url_for(post.picture)) %>'>
-                        <p><%= post.category.name %></p>
+                        <div style='background-image: url(<%=(url_for(post.picture)) %>)'></div>
                     </li>
                 <% end %>
             </ul>
-
-        </div><!-- Main Col END -->
-        
-    </div><!-- body-row END -->
-  
-  
-</div><!-- container -->
+        </div>
+    </div>  
+</div>
