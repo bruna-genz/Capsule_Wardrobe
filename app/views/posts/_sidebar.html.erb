@@ -7,13 +7,24 @@
     <ul class="nav flex-column">
         <li class="nav-item big d-flex justify-content-center pt-2">
             <p class="nav-link mb-0" href="#">
-                <Categories>
+                Categories
             </p>
         </li>
+        <li class="nav-item d-flex justify-content-center">
+            <%= link_to posts_path, class: 'nav-link' do %>
+                All
+                <span class="badge badge-secondary">
+                    <%= Post.all.count %>
+                </span>
+            <% end %>
+        <li>
         <% Category.all.each do |category| %>
             <li class="nav-item d-flex justify-content-center">
                 <%= link_to posts_path(:category_id => category.id), class: 'nav-link' do %>
-                    <%= category.name %><span class="badge badge-secondary"><%= Category.find_by(name: category.name).posts.count %></span>
+                    <%= category.name %>
+                    <span class="badge badge-secondary">
+                        <%= Category.find_by(name: category.name).posts.count %>
+                    </span>
                 <% end %>
             </li>
         <% end %>

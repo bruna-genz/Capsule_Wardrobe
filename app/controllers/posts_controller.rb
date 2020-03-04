@@ -1,6 +1,9 @@
 class PostsController < ApplicationController  
   def index
-    @posts = current_user.posts.where("category_id = ?", params[:category_id])
+    @posts = params[:category_id] ? current_user.posts.where("category_id = ?", params[:category_id]) : Post.all 
+    if @posts.empty?
+      flash.now[:notice] = "No items in this category."
+    end
   end
 
   def new

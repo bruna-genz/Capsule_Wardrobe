@@ -2,7 +2,10 @@
     <div class="row h-100" id="body-row">
         <%= render "sidebar" %>
         <div class="col pt-3">
-            <h1 class="title-small"><%= get_category_name(params[:category_id]) %></h1>
+            <h1 class="title-small mt-2 ml-5">
+                <%= get_category_name(params[:category_id]) %>
+            </h1>
+            <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
             <ul id="images-container">
                 <% @posts.each do |post| %>
                     <li>
