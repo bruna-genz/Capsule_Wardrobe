@@ -9,7 +9,9 @@
             <ul id="images-container">
                 <% @posts.each do |post| %>
                     <li>
-                        <div style='background-image: url(<%=(url_for(post.picture)) %>)'></div>
+                        <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
+                            <%= link_to "Delete", post_path(post), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
+                        </div>
                     </li>
                 <% end %>
             </ul>

@@ -25,9 +25,20 @@
     list-style: none;
     margin: 15px;
     div {
+      display: flex;
+      align-items: flex-end;
       background-size: contain;
       height: 100%;
       background-repeat: no-repeat;
+      a {
+        visibility: hidden;
+        margin: 0 0 15px 10px;
+      }
+      &:hover {
+        a {
+          visibility: visible;
+        }
+      }
     }
   }
 }
