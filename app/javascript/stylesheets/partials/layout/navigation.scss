@@ -1,0 +1,18 @@
+@import "../../base/variables.scss";
+
+.navbar {
+  height: 90px;
+  background-color: $navbarColor;
+  box-shadow: 0 3px 3px -2px rgba(26, 23, 23, 0.781);
+  .white-link {
+    color: $lightgray !important;
+  }
+  .navbar-brand {
+    font-family: $logo-font;
+    font-size: 40px;
+  }
+}
+
+.dropdown-item {
+  color: $navbarColor !important;
+}

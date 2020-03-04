@@ -10,6 +10,7 @@ ruby '2.6.3'
 gem 'jquery-turbolinks'
 gem 'devise'
 gem 'bootstrap_form'
+gem 'font-awesome-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'

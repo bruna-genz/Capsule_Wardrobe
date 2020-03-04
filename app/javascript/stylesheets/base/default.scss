@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+  margin-top: 90px !important;
+  font-family: $basic-font;
+}
+
+/*    Titles and paragraphs   */
+
+.title-big {
+  font-family: $logo-font;
+  font-size: 90px;
+}
+
+.title-medium {
+  font-family: $logo-font;
+  font-size: 60px;
+}
+
+.title-small {
+  font-family: $logo-font;
+  font-size: 40px;
+}
+
+.subtitle {
+  font-family: $basic-font;
+  font-size: 30px;
+}
+
+.paragraph-big {
+  font-family: $basic-font;
+  font-size: 20px;
+}
+
+/*    Colors    */
+
+.wine {
+  color: $navbarColor;
+}
+
+/*    Backgrounds     */
+
+.maroon-bg {
+  background-color: rgba(148, 123, 137, 0.589) !important;
+}
+
+/*    Forms     */
+
+#error_explanation,
+#flash_alert,
+#flash_error {
+  border: 2px rgb(180, 6, 6) solid;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  h2 {
+    font-size: 25px;
+  }
+  ul{
+    margin-bottom: 0;
+  }
+}
+
+#cancel-container {
+  display: flex;
+  margin-top: 22px;
+  p {
+    margin: 0;
+  }
+  #cancel-btn {
+    background-color: white;
+    border: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

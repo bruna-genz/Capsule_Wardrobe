@@ -1,0 +1,44 @@
+.full-page {
+  height: 90vh;
+}
+
+.sidebar-sticky {
+  .big {
+    font-size: 20px;
+  }
+  a {
+    color: black;
+    &:hover {
+      background-color: $hoverColor;
+      color: black;
+    }
+  }
+}
+
+#images-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  li {
+    width: 18%;
+    height: 200px;
+    list-style: none;
+    margin: 15px;
+    div {
+      display: flex;
+      align-items: flex-end;
+      background-size: contain;
+      height: 100%;
+      background-repeat: no-repeat;
+      a {
+        visibility: hidden;
+        margin: 0 0 15px 10px;
+      }
+      &:hover {
+        a {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

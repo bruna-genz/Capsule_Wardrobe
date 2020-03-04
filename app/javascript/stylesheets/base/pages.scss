@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.first-block {
+    background-image: linear-gradient(rgba(148, 123, 137, 0.849)), 
+                      url("https://images.unsplash.com/photo-1520204871215-20ab878aa1a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 90vh;
+    align-items: center;
+}
+
+.second-block,
+.third-block {
+    height: 100vh;
+    align-items: center;
+}
+
+.second-block {
+    background-color: rgba(174, 184, 195, 0.637) !important;
+}
