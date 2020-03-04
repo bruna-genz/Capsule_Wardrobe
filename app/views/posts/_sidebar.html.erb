@@ -14,7 +14,7 @@
             <%= link_to posts_path, class: 'nav-link' do %>
                 All
                 <span class="badge badge-secondary">
-                    <%= Post.all.count %>
+                    <%= current_user.posts.count %>
                 </span>
             <% end %>
         <li>
@@ -23,7 +23,7 @@
                 <%= link_to posts_path(:category_id => category.id), class: 'nav-link' do %>
                     <%= category.name %>
                     <span class="badge badge-secondary">
-                        <%= Category.find_by(name: category.name).posts.count %>
+                        <%= get_category_count(category) %>
                     </span>
                 <% end %>
             </li>
