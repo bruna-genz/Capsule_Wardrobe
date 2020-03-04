@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   root to: 'pages#home'
-  resources :posts
   get 'select_category', to: 'posts#select_category'
+  get 'show_options', to: 'combinations#show_options'
+  get 'select_posts', to: 'combinations#select_posts'
   
+  resources :posts
+  resources :combinations
+
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'
   end

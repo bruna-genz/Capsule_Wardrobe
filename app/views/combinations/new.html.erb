@@ -1,0 +1,15 @@
+<div class="container-fluid full-page">
+    <div class="row h-100" id="body-row">
+        <%= render "posts/sidebar" %>
+        <div class="col pt-3">
+            <%= form_for @combination do |f| %>
+            <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+
+            <%= f.label "New combination:" %>
+            <%= f.text_field :name, placeholder: "name", class: 'pl-2' %>
+
+            <%= f.submit 'Next', class: 'btn sign-up-button btn-outline-secondary mt-3' %>
+            <% end %>
+        </div>
+    </div>  
+</div>
