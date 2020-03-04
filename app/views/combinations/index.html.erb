@@ -1,0 +1,18 @@
+<div class="container-fluid full-page">
+    <div class="row h-100" id="body-row">
+        <%= render "posts/sidebar" %>
+        <div class="col pt-3">
+            <h1 class="paragraph-big  mt-2 ml-5">
+                Your combinations:
+            </h1>
+            <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
+            <ul>
+                <% @combinations.each do |combination| %>
+                    <li>
+                        <%= link_to combination.name, combination %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>  
+</div>
