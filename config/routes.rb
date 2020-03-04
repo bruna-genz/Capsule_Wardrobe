@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   root to: 'pages#home'
   resources :posts
+  get 'select_category', to: 'posts#select_category'
   
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'

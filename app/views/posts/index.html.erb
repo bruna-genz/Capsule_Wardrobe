@@ -2,6 +2,7 @@
     <div class="row h-100" id="body-row">
         <%= render "sidebar" %>
         <div class="col pt-3">
+            <h1 class="title-small"><%= get_category_name(params[:category_id]) %></h1>
             <ul id="images-container">
                 <% @posts.each do |post| %>
                     <li>

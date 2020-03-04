@@ -12,9 +12,9 @@
         </li>
         <% Category.all.each do |category| %>
             <li class="nav-item d-flex justify-content-center">
-                <a class="nav-link" href="#">
+                <%= link_to posts_path(:category_id => category.id), class: 'nav-link' do %>
                     <%= category.name %><span class="badge badge-secondary"><%= Category.find_by(name: category.name).posts.count %></span>
-                </a>
+                <% end %>
             </li>
         <% end %>
     </ul>

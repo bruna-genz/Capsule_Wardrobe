@@ -1,6 +1,6 @@
 class PostsController < ApplicationController  
   def index
-    @posts = current_user.posts
+    @posts = current_user.posts.where("category_id = ?", params[:category_id])
   end
 
   def new
