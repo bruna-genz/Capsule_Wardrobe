@@ -10,6 +10,7 @@
                     <% @items.each do |item| %>
                         <li>
                             <div style='background-image: url(<%=(url_for(item.picture)) %>)'></div>
+                            <%= link_to "Remove item", post_combination_path(:combination_id => @combination_id, :post_id => item.id), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
                         </li>
                     <% end %>
                 </ul>
@@ -18,6 +19,8 @@
                 Add items
                 <img src="https://img.icons8.com/metro/26/000000/plus.png">
             <% end %>
+            <%= link_to "Delete", combination_path(@combination), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
+            <%= link_to "Back", combinations_path, class:"btn btn-secondary btn-sm" %>
         </div>
     </div>  
 </div>

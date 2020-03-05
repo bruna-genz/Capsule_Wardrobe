@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'select_category', to: 'posts#select_category'
   get 'show_options', to: 'combinations#show_options'
-  get 'select_posts', to: 'combinations#select_posts'
   
   resources :posts
   resources :combinations
+  resources :post_combinations
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'

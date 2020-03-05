@@ -1,4 +1,6 @@
 class CombinationsController < ApplicationController
+    before_action :find_combination, only: [:show, :show_options, :select_posts, :destroy]
+
     def new
         @combination = current_user.combinations.build
     end
@@ -15,7 +17,6 @@ class CombinationsController < ApplicationController
     end
 
     def show
-        @combination = Combination.find(params[:id])
         @items = @combination.posts.all
     end
 
@@ -24,16 +25,22 @@ class CombinationsController < ApplicationController
     end
 
     def show_options
-        @posts = current_user.posts.all
+        @posts = (current_user.posts.all - @combination.posts) | (@combination.posts - current_user.posts.all)
+        flash[:notice] = "You don't have any items to add into this combinations."
     end
 
-    def select_posts
-        PostCombination.create(post_id: params[:post_id], combination_id: params[:combination_id])
+    def destroy
+        @combination.destroy
+        redirect_to combinations_path
     end
 
     private
 
     def combination_params
         params.require(:combination).permit(:name)
+    end
+
+    def find_combination
+        @combination = params[:combination_id] ? Combination.find(params[:combination_id]) : Combination.find(params[:id])
     end
 end
