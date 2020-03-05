@@ -1,0 +1,19 @@
+#combinations-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    #combination-container {
+        list-style: none;
+        display: flex; 
+        .image-small {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+        }
+        
+    }
+    .combination-title {
+        color: black;
+        text-decoration: none;
+    }
+}

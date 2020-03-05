@@ -13,9 +13,12 @@
  */
 // Bootstrap
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
 @import "base/default.scss";
 @import "base/variables.scss";
 @import "base/pages.scss";
 @import "base/posts.scss";
+@import "base/combinations.scss";
 @import "partials/layout/navigation.scss";
+@import "partials/layout/sidebar.scss";
 @import "~bootstrap/scss/bootstrap";
