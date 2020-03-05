@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :combinations
   resources :post_combinations
+  resources :categories
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'

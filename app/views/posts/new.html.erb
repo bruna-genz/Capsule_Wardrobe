@@ -11,6 +11,8 @@
 
               <%= f.select(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
 
+              <%= link_to '(add category)', new_category_path, class: 'nav-link absolute-link' %>
+
               <%= f.submit 'Create', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
            <% end %>
         </div>

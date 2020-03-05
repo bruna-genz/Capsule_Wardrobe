@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @categories ||= Category.all.map{ |cat| [cat.name, cat.id] }
+    @categories = Category.all.map{ |cat| [cat.name, cat.id] }
   end
 
   def create
