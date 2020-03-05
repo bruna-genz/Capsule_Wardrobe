@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Bootsrap
 gem 'bootstrap', '~> 4.3.1'
+#gem 'pagy', '~> 3.5'
 
 #gem 'jquery-rails'
 gem 'jquery-turbolinks'

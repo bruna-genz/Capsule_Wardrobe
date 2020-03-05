@@ -1,4 +1,5 @@
 class PostsController < ApplicationController  
+  before_action :get_categories, only: [:new, :edit]
   def index
     @posts = params[:category_id] ? current_user.posts.where("category_id = ?", params[:category_id]) : current_user.posts.all 
     if @posts.empty?
@@ -8,7 +9,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @categories = Category.all.map{ |cat| [cat.name, cat.id] }
   end
 
   def create
@@ -22,6 +22,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end 
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(posts_params)
+      redirect_to posts_path
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
@@ -32,5 +45,9 @@ class PostsController < ApplicationController
 
   def posts_params
     params.require(:post).permit(:category_id, :picture)
+  end
+
+  def get_categories
+    @categories = Category.all.map{ |cat| [cat.name, cat.id] }
   end
 end
