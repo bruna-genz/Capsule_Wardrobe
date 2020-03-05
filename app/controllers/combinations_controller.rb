@@ -26,7 +26,7 @@ class CombinationsController < ApplicationController
 
     def show_options
         @posts = (current_user.posts.all - @combination.posts) | (@combination.posts - current_user.posts.all)
-        flash[:notice] = "You don't have any items to add into this combinations."
+        flash[:notice] = "You don't have any items to add into this combinations." if @posts.empty?
     end
 
     def destroy
