@@ -10,12 +10,22 @@
     align-items: center;
 }
 
-.second-block,
-.third-block {
+.second-block {
     height: 100vh;
     align-items: center;
+    background-color: white !important;
 }
 
-.second-block {
-    background-color: rgba(174, 184, 195, 0.637) !important;
+.arrow {
+    img {
+        height: 20px;
+    }
+}
+
+.prev {
+    transform: scaleX(-1);
+}
+
+.carousel-indicators li {
+    background-color: black !important;
 }
