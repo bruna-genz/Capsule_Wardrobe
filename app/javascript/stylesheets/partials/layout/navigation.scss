@@ -13,6 +13,10 @@
   }
 }
 
+.dropdown-menu {
+  position: absolute !important;
+}
+
 .dropdown-item {
   color: $navbarColor !important;
 }
@@ -23,3 +27,4 @@
   color: white;
   bottom: 0;
 }
+

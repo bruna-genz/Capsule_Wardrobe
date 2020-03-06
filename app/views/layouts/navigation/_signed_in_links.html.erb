@@ -1,13 +1,14 @@
-<div class="btn-group">
+<div class="btn-group align-items-center">
     <%= link_to "My wardrobe", posts_path, class: "nav-link white-link" %>
-    <button type="button" class="btn dropdown-toggle white-link mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Options
-    </button>
-    <div class="dropdown-menu dropdown-menu-right">
-        <%= link_to "Add clothes", new_post_path, class: 'dropdown-item' %>
-        <%= link_to "Visit store", "#", class: 'dropdown-item' %>
-        <%= link_to "Edit profile", edit_user_registration_path, class: 'dropdown-item' %>
-    <div class="dropdown-divider"></div>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+    <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle white-link mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to "Add clothes", new_post_path, class: 'dropdown-item' %>
+            <%= link_to "Edit profile", edit_user_registration_path, class: 'dropdown-item' %>
+        <div class="dropdown-divider"></div>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+        </div>
     </div>
 </div>
