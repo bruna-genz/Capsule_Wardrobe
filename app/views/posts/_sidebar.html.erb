@@ -1,6 +1,6 @@
-<div class="sidebar-sticky border-right border-secondary p-3">
+<div class="sidebar-sticky border-right border-secondary p-1">
     <ul class="nav flex-column border-bottom border-secondary">
-        <li class="nav-item d-flex justify-content-center p-3">
+        <li class="nav-item d-flex justify-content-center py-3 px-5">
             <h1 class="title-small"><%= current_user.name %></h1>
         </li>
     </ul>
@@ -13,7 +13,7 @@
         <li class="nav-item d-flex justify-content-center">
             <%= link_to posts_path, class: 'nav-link' do %>
                 All
-                <span class="badge badge-secondary">
+                <span class="badge badge-secondary ml-1">
                     <%= current_user.posts.count %>
                 </span>
             <% end %>
@@ -22,15 +22,33 @@
             <li class="nav-item d-flex justify-content-center">
                 <%= link_to posts_path(:category_id => category.id), class: 'nav-link' do %>
                     <%= category.name %>
-                    <span class="badge badge-secondary">
+                    <span class="badge badge-secondary ml-1">
                         <%= get_category_count(category) %>
                     </span>
                 <% end %>
             </li>
         <% end %>
+        <li class="nav-item d-flex justify-content-center">
+            <%= link_to 'Add category', new_category_path, class: 'nav-link' %>
+        </li>
     </ul>
     <ul class="nav flex-column border-top border-secondary">
-        <li class="nav-item big d-flex justify-content-center p-3">
+        <li class="nav-item big d-flex justify-content-center pt-2">
+            <p class="nav-link mb-0" href="#">
+                My looks
+            </p>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+            <%= link_to combinations_path, class:"nav-link" do %>
+                All
+                <span class="badge badge-secondary ml-1">
+                    <%= current_user.combinations.count %>
+                </span>
+            <% end %>
+        </li>
+    </ul>
+    <ul class="nav flex-column border-top border-secondary">
+        <li class="nav-item big d-flex justify-content-center pt-2">
             <%= link_to new_post_path, class:"nav-link" do %>
                 Add clothes
                 <img src="https://img.icons8.com/metro/26/000000/plus.png">

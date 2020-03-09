@@ -1,9 +1,13 @@
 module PostsHelper
   def get_category_name(cat_id = nil)
-    cat_id ? Category.find(cat_id).name : "All"
+    cat_id ? Category.find(cat_id).name : "All clothes"
   end
 
-  def get_category_count(category)
-    Category.find_by(name: category.name).posts.where("user_id = ?", current_user.id).count
+  def delete_category(category_id = nil)
+    if category_id
+      link_to "Delete category", category_path(category_id), method: :delete,  
+                                                            class:"btn btn-secondary btn-sm mr-5",  
+                                                            data: { confirm: 'Are you sure?' }
+    end
   end
 end

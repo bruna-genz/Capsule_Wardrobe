@@ -2,15 +2,35 @@
     <div class="row h-100" id="body-row">
         <%= render "sidebar" %>
         <div class="col pt-3">
-            <h1 class="title-small mt-2 ml-5">
-                <%= get_category_name(params[:category_id]) %>
-            </h1>
+            <div class="d-flex align-items-baseline">
+                <h1 class="title-small mt-2 ml-5 mr-3">
+                    <%= get_category_name(params[:category_id]) %>
+                </h1>
+            <%= delete_category(params[:category_id]) %>
+            </div>
             <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
+            
+            <% if flash[:pop_up] %>
+                <div class="alert alert-warning alert-dismissible fade show mx-5 mt-3" role="alert">
+                    <strong>So many clothes!</strong> <br/>
+                    <p>Although the limit for the number of items you have in your wardrobe doesn't 
+                    need to be so rigid, the main goal of making a capsule is to declutter and keeping 
+                    only pieces that are useful and important for you.</p>
+                    <p>This is a good time to re-evaluate what you have in your wardrobe. Remember 
+                    that you can always edit your capsule, make new looks, remove pieces that don't
+                     make sense anymore. </p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <% end %>
+            
             <ul id="images-container">
                 <% @posts.each do |post| %>
                     <li>
-                        <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
-                            <%= link_to "Delete", post_path(post), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
+                        <div class="img-fluid" style='background-image: url(<%=(url_for(post.picture)) %>)'>
+                            <%= link_to "Edit", edit_post_path(post), class:"btn btn-secondary btn-sm" %>
+                            <%= link_to "Delete", post_path(post), method: :delete, class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
                         </div>
                     </li>
                 <% end %>

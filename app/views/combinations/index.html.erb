@@ -1,0 +1,33 @@
+<div class="container-fluid full-page">
+    <div class="row h-100" id="body-row">
+        <%= render "posts/sidebar" %>
+        <div class="col pt-3">
+            <h1 class="title-small mt-1 mb-4 ml-4">
+                <%= display_text(@combinations) %>
+            </h1>
+            <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
+            <ul id="combinations-list" class="mt-4">
+                <% @combinations.each do |combination| %>
+                    <li class="mx-2 border border-secondary rounded p-1">
+                        <%= link_to combination, class:"paragraph-big combination-title p-3" do %>
+                            <%= combination.name %>
+                            <ul id='combination-container' class='pt-2'>
+                                <% combination.posts.each do |item| %>
+                                    <li>
+                                        <div class='image-small' style='background-image: url(<%=(url_for(item.picture)) %>)'></div>
+                                    </li>
+                                <% end %>
+                            </ul>
+                        <% end %>
+                    </li>   
+                <% end %>
+            </ul>
+            <%= link_to new_combination_path, class:"btn btn-outline-secondary text-body ml-4 mt-4 mb-3" do %>
+                Create new look
+                <img src="https://img.icons8.com/metro/26/000000/plus.png">
+            <% end %>
+            <br/>
+            <%= link_to "Back", posts_path, class:"btn btn-outline-secondary text-body ml-4" %>
+        </div>
+    </div>  
+</div>

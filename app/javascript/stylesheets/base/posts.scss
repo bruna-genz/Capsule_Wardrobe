@@ -1,18 +1,5 @@
 .full-page {
-  height: 90vh;
-}
-
-.sidebar-sticky {
-  .big {
-    font-size: 20px;
-  }
-  a {
-    color: black;
-    &:hover {
-      background-color: $hoverColor;
-      color: black;
-    }
-  }
+  min-height: 90vh;
 }
 
 #images-container {
@@ -41,4 +28,11 @@
       }
     }
   }
+}
+
+.absolute-link {
+  position: absolute;
+  top: 161px;
+  left: 111px;
+  font-size: 13px;
 }
