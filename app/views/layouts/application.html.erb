@@ -4,6 +4,7 @@
     <title>Capsule Wardrobe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,12 +12,20 @@
 
   <body>
     <%= render 'layouts/navigation/navigation' %>
-    <%= yield %>
-  </body>
+    <%= render 'layouts/navigation/sidebar_mobile' if render_sidebar %>
+    <div class="container-fluid full-page">
+      <div class="row full-page" id="body-row">
+        <%= render 'layouts/navigation/sidebar' if render_sidebar %>
+        
+        <%= yield %>
+      </div>
+    </div>
+    
 
-  <nav class="navbar-bottom navbar py-0">
-    <span class="navbar-text">
-      Created by Bruna Genz
-    </span>
-  </nav>
+    <nav class="navbar-bottom navbar py-0">
+      <span class="navbar-text">
+        Created by Bruna Genz
+      </span>
+    </nav>
+  </body>
 </html>

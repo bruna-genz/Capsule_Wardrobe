@@ -1,16 +1,28 @@
 @import "../../base/variables.scss";
 
 .sidebar-sticky {
-    .big {
-      font-size: 20px;
-    }
-    a {
+  .big {
+    font-size: 20px;
+  }
+  a {
+    color: black;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      background-color: $hoverColor;
       color: black;
-      width: 100%;
-      text-align: center;
-      &:hover {
-        background-color: $hoverColor;
-        color: black;
-      }
     }
   }
+  @media only screen and (max-device-width : 720px) {
+    display: none;
+  }
+}
+
+.sidebar-mobile {
+  display: none;
+  @media only screen and (max-device-width : 720px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}

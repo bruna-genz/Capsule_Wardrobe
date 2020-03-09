@@ -14,26 +14,41 @@ body {
 .title-big {
   font-family: $logo-font;
   font-size: 90px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 57px;
+  }
 }
 
 .title-medium {
   font-family: $logo-font;
   font-size: 60px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 32px;
+  }
 }
 
 .title-small {
   font-family: $logo-font;
   font-size: 40px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 30px;
+  }
 }
 
 .subtitle {
   font-family: $basic-font;
   font-size: 30px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 20px;
+  }
 }
 
 .paragraph-big {
   font-family: $basic-font;
   font-size: 20px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 12px;
+  }
 }
 
 /*    Colors    */

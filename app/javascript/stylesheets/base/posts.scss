@@ -7,16 +7,19 @@
   flex-wrap: wrap;
   margin-top: 25px;
   li {
-    width: 18%;
-    height: 200px;
     list-style: none;
     margin: 15px;
     div {
       display: flex;
       align-items: flex-end;
-      background-size: contain;
-      height: 100%;
+      background-size: cover;
+      width: 215px;
+      height: 200px;
       background-repeat: no-repeat;
+      @media only screen and (max-device-width : 720px) {
+        width: 160px;
+        height: 150px;
+      }
       a {
         visibility: hidden;
         margin: 0 0 15px 10px;
@@ -33,6 +36,9 @@
 .absolute-link {
   position: absolute;
   top: 161px;
-  left: 111px;
+  left: 63px;
   font-size: 13px;
+  @media only screen and (max-device-width : 720px) {
+    top: 143px;
+  }
 }

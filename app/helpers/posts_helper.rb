@@ -6,7 +6,7 @@ module PostsHelper
   def delete_category(category_id = nil)
     if category_id
       link_to "Delete category", category_path(category_id), method: :delete,  
-                                                            class:"btn btn-secondary btn-sm mr-5",  
+                                                            class:"btn btn-secondary btn-sm ml-sm-2",  
                                                             data: { confirm: 'Are you sure?' }
     end
   end

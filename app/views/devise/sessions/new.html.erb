@@ -1,37 +1,33 @@
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="col-sm-6 col-sm-offset-3 mt-5">
-      <h2 class="text-center title-medium mt-5 mb-5">Log in</h2>
-      
-      <%= bootstrap_form_for(resource, 
-                       as: resource_name, 
-                       url: session_path(resource_name)) do |f| %>
+<div class="col-sm-6 col-sm-offset-3 mt-sm-5 mt-1 mx-auto">
+  <h2 class="text-center title-medium mt-5 mb-5">Log in</h2>
+  
+  <%= bootstrap_form_for(resource, 
+                    as: resource_name, 
+                    url: session_path(resource_name)) do |f| %>
 
-          <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
-          <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
-          <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+      <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+      <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+      <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
 
-          <%= f.email_field :email, 
-                      autofocus: true, 
-                      class: 'form-control', 
-                      placeholder: 'email' %>
+      <%= f.email_field :email, 
+                  autofocus: true, 
+                  class: 'form-control', 
+                  placeholder: 'email' %>
 
-          <%= f.password_field  :password, 
-                          autocomplete: "off", 
-                          class: 'form-control',
-                          placeholder: 'password' %>
+      <%= f.password_field  :password, 
+                      autocomplete: "off", 
+                      class: 'form-control',
+                      placeholder: 'password' %>
 
 
-        <% if devise_mapping.rememberable? -%>
-          <%= f.check_box :remember_me %>
-        <% end %>
+    <% if devise_mapping.rememberable? -%>
+      <%= f.check_box :remember_me %>
+    <% end %>
 
-        <p class="mt-2 mb-3">Don't have an account? <%= link_to "Sign up.", signup_path %></p>
+    <p class="mt-2 mb-3">Don't have an account? <%= link_to "Sign up.", signup_path %></p>
 
-        <%= f.submit "Log in", class: 'form-control login-button btn-outline-secondary' %>
-      <% end %>
-      
-    </div>
-  </div> 
+    <%= f.submit "Log in", class: 'form-control login-button btn-outline-secondary' %>
+  <% end %>
+  
 </div>
 
