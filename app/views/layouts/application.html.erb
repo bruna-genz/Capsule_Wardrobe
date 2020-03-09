@@ -11,12 +11,20 @@
 
   <body>
     <%= render 'layouts/navigation/navigation' %>
-    <%= yield %>
-  </body>
+    <%= render 'layouts/navigation/sidebar_mobile' unless current_page?(root_path) %>
+    <div class="container-fluid full-page">
+      <div class="row full-page" id="body-row">
+        <%= render 'layouts/navigation/sidebar' unless current_page?(root_path) %>
+        
+        <%= yield %>
+      </div>
+    </div>
+    
 
-  <nav class="navbar-bottom navbar py-0">
-    <span class="navbar-text">
-      Created by Bruna Genz
-    </span>
-  </nav>
+    <nav class="navbar-bottom navbar py-0">
+      <span class="navbar-text">
+        Created by Bruna Genz
+      </span>
+    </nav>
+  </body>
 </html>

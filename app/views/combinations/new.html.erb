@@ -1,15 +1,10 @@
-<div class="container-fluid full-page">
-    <div class="row h-100" id="body-row">
-        <%= render "posts/sidebar" %>
-        <div class="col mt-5 mb-4 ml-5 pl-5">
-            <h2 class="title-medium">Create a new look</h2>
-            <%= bootstrap_form_for @combination, html: { class:"w-25" } do |f| %>
-                <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+<div class="col mt-5 mb-4 ml-5 pl-5">
+    <h2 class="title-medium">Create a new look</h2>
+    <%= bootstrap_form_for @combination, html: { class:"w-25" } do |f| %>
+        <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
 
-                <%= f.text_field :name, placeholder: "name", class: 'pl-2' %>
+        <%= f.text_field :name, placeholder: "name", class: 'pl-2' %>
 
-                <%= f.submit 'Next', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
-            <% end %>
-        </div>
-    </div>  
+        <%= f.submit 'Next', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
+    <% end %>
 </div>
