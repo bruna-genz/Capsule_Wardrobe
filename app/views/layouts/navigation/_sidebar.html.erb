@@ -1,7 +1,11 @@
 <div class="sidebar-sticky border-right border-secondary p-1">
     <ul class="nav flex-column border-bottom border-secondary">
         <li class="nav-item d-flex justify-content-center py-3 px-5">
-            <h1 class="title-small"><%= current_user.name %></h1>
+            <h1 class="title-small">
+                <%= link_to posts_path do %>
+                    <% current_user.name %>
+                <% end %>
+            </h1>
         </li>
     </ul>
     <ul class="nav flex-column">

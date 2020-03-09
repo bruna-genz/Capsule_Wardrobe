@@ -10,6 +10,14 @@
   .navbar-brand {
     font-family: $logo-font;
     font-size: 40px;
+    @media only screen and (max-device-width : 480px) {
+      font-size: 27px;
+    }
+  }
+  @media only screen and (max-device-width : 480px) {
+    font-size: 27px;
+    align-items: baseline;
+    padding-top: 17px;
   }
 }
 
