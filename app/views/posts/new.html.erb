@@ -1,6 +1,6 @@
-<div class="col mt-5 mb-4 ml-5 pl-5">
-    <h2 class="title-medium">Add clothes</h2>
-    <%= bootstrap_form_for @post, html: { class:"w-25" } do |f| %>
+<div class="col-sm-6 col-sm-offset-3 mt-5 mx-auto">
+    <h2 class="text-center title-medium mt-5 mb-5">Add clothes</h2>
+    <%= bootstrap_form_for @post do |f| %>
         <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
 
         <%= f.file_field :picture,  

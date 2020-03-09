@@ -36,6 +36,9 @@
 .absolute-link {
   position: absolute;
   top: 161px;
-  left: 111px;
+  left: 63px;
   font-size: 13px;
+  @media only screen and (max-device-width : 720px) {
+    top: 143px;
+  }
 }

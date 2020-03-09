@@ -8,7 +8,7 @@
             <li class="mx-2 mb-2 border border-secondary rounded p-1">
                 <%= link_to combination, class:"paragraph-big combination-title p-3" do %>
                     <%= combination.name %>
-                    <ul id='combination-container' class='pt-2'>
+                    <ul id='combination-container' class='pt-2 pl-1'>
                         <% combination.posts.each do |item| %>
                             <li>
                                 <div class='image-small' style='background-image: url(<%=(url_for(item.picture)) %>)'></div>

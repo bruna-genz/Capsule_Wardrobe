@@ -12,10 +12,10 @@
 
   <body>
     <%= render 'layouts/navigation/navigation' %>
-    <%= render 'layouts/navigation/sidebar_mobile' unless current_page?(root_path) %>
+    <%= render 'layouts/navigation/sidebar_mobile' if render_sidebar %>
     <div class="container-fluid full-page">
       <div class="row full-page" id="body-row">
-        <%= render 'layouts/navigation/sidebar' unless current_page?(root_path) %>
+        <%= render 'layouts/navigation/sidebar' if render_sidebar %>
         
         <%= yield %>
       </div>

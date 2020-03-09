@@ -14,23 +14,23 @@ body {
 .title-big {
   font-family: $logo-font;
   font-size: 90px;
-  @media only screen and (max-device-width : 480px) {
-    font-size: 70px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 57px;
   }
 }
 
 .title-medium {
   font-family: $logo-font;
   font-size: 60px;
-  @media only screen and (max-device-width : 480px) {
-    font-size: 45px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 32px;
   }
 }
 
 .title-small {
   font-family: $logo-font;
   font-size: 40px;
-  @media only screen and (max-device-width : 480px) {
+  @media only screen and (max-device-width : 720px) {
     font-size: 30px;
   }
 }
@@ -38,7 +38,7 @@ body {
 .subtitle {
   font-family: $basic-font;
   font-size: 30px;
-  @media only screen and (max-device-width : 480px) {
+  @media only screen and (max-device-width : 720px) {
     font-size: 20px;
   }
 }
@@ -46,8 +46,8 @@ body {
 .paragraph-big {
   font-family: $basic-font;
   font-size: 20px;
-  @media only screen and (max-device-width : 480px) {
-    font-size: 15px;
+  @media only screen and (max-device-width : 720px) {
+    font-size: 12px;
   }
 }
 
