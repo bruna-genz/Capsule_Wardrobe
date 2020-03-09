@@ -13,14 +13,14 @@
       color: black;
     }
   }
-  @media only screen and (max-device-width : 480px) {
+  @media only screen and (max-device-width : 720px) {
     display: none;
   }
 }
 
 .sidebar-mobile {
   display: none;
-  @media only screen and (max-device-width : 480px) {
+  @media only screen and (max-device-width : 720px) {
     display: flex;
     align-items: baseline;
     justify-content: space-between;

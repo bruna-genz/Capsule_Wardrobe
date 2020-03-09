@@ -1,6 +1,6 @@
 <div class="col pt-3">
     <div class="d-flex align-items-baseline">
-        <h1 class="title-small mt-2 ml-5 mr-3">
+        <h1 class="title-small mt-2 ml-sm-5 ml-2 mr-3">
             <%= get_category_name(params[:category_id]) %>
         </h1>
     <%= delete_category(params[:category_id]) %>
@@ -22,10 +22,10 @@
         </div>
     <% end %>
     
-    <ul id="images-container">
+    <ul id="images-container" class="p-0 mt-1">
         <% @posts.each do |post| %>
             <li>
-                <div class="img-fluid" style='background-image: url(<%=(url_for(post.picture)) %>)'>
+                <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
                     <%= link_to "Edit", edit_post_path(post), class:"btn btn-secondary btn-sm" %>
                     <%= link_to "Delete", post_path(post), method: :delete, class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
                 </div>

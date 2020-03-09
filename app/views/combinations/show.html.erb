@@ -3,7 +3,7 @@
     <% if @items.empty? %>
         <h1 class="paragraph-big">No items in this combination yet</h1>
     <% else %>
-        <ul id="images-container">
+        <ul id="images-container" class="p-0 mt-1">
             <% @items.each do |item| %>
                 <li>
                     <div style='background-image: url(<%=(url_for(item.picture)) %>)'>
