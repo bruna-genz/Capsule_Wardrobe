@@ -13,12 +13,12 @@
       display: flex;
       align-items: flex-end;
       background-size: cover;
-      width: 215px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       background-repeat: no-repeat;
       @media only screen and (max-device-width : 720px) {
         width: 160px;
-        height: 150px;
+        height: 160px;
       }
       a {
         visibility: hidden;

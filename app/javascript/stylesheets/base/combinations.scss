@@ -6,12 +6,12 @@
         list-style: none;
         display: flex; 
         .image-small {
-            width: 100px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             background-size: cover;
             @media only screen and (max-device-width : 720px) {
-                width: 80px;
-                height: 70px;
+                width: 85px;
+                height: 85px;
               }
         }
         

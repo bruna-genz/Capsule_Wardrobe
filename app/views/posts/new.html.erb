@@ -4,7 +4,8 @@
         <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
 
         <%= f.file_field :picture,  
-                        class: 'form-control' %>
+                        class: 'form-control',
+                        direct_upload: true  %>
 
         <%= f.select(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
 
