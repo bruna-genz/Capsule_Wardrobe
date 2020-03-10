@@ -5,7 +5,7 @@
     <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
     <ul id="images-container" class="p-0 mt-1">
         <% @posts.each do |post| %>
-            <li>
+            <li class="mx-1 mx-sm-4">
                 <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
                     <%= link_to new_post_combination_path(:combination_id => params[:combination_id], :post_id => post.id), class:"btn btn-light" do %>
                         <img src="https://img.icons8.com/metro/26/000000/plus.png">

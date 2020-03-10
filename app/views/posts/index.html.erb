@@ -24,7 +24,7 @@
     
     <ul id="images-container" class="p-0 mt-1">
         <% @posts.each do |post| %>
-            <li>
+            <li class="mx-1 mx-sm-4">
                 <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
                     <%= link_to "Edit", edit_post_path(post), class:"btn btn-secondary btn-sm" %>
                     <%= link_to "Delete", post_path(post), method: :delete, class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>

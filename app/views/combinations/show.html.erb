@@ -5,7 +5,7 @@
     <% else %>
         <ul id="images-container" class="p-0 mt-1">
             <% @items.each do |item| %>
-                <li>
+                <li class="mx-1 mx-sm-4">
                     <div style='background-image: url(<%=(url_for(item.picture)) %>)'>
                         <%= link_to "Remove item", post_combination_path(:combination_id => @combination_id, :post_id => item.id), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
                     </div>
