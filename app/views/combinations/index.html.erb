@@ -10,7 +10,7 @@
                     <%= combination.name %>
                     <ul id='combination-container' class='pt-2 pl-1'>
                         <% combination.posts.each do |item| %>
-                            <li>
+                            <li ml-1>
                                 <div class='image-small' style='background-image: url(<%=(url_for(item.picture)) %>)'></div>
                             </li>
                         <% end %>

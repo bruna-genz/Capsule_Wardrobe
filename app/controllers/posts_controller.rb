@@ -1,5 +1,6 @@
 class PostsController < ApplicationController  
   before_action :get_categories, only: [:new, :edit]
+  before_action  :login_user 
 
   def index
     @posts = params[:category_id] ? current_user.posts.where("category_id = ?", params[:category_id]) : current_user.posts.all 
@@ -57,5 +58,12 @@ class PostsController < ApplicationController
     [45, 50, 55, 60, 65, 70].each do |limit|
       flash[:pop_up] = "too many clothes!!!" if current_user.posts.count == limit
     end    
+  end
+
+  def login_user
+    unless user_signed_in?
+      redirect_to login_path
+      flash[:error] = "You must login first."
+    end
   end
 end

@@ -13,12 +13,12 @@
       display: flex;
       align-items: flex-end;
       background-size: cover;
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 290px;
       background-repeat: no-repeat;
       @media only screen and (max-device-width : 720px) {
-        width: 160px;
-        height: 160px;
+        width: 155px;
+        height: 210px;
       }
       a {
         visibility: hidden;
@@ -39,6 +39,6 @@
   left: 63px;
   font-size: 13px;
   @media only screen and (max-device-width : 720px) {
-    top: 143px;
+    top: 127px;
   }
 }
