@@ -1,6 +1,6 @@
 # Capsule Wardrobe
 
-[Live Demo Link](#)
+[Live Demo Link](https://agile-sea-56583.herokuapp.com/)
 
 ### What is capsule wardrobe?
 Capsule wardrobe it's a collection of a few essential and versatile clothes that don't go out of fashion. They can be mixed and matched to create a wide variety of outfits for everyday use. They can be mixed and matched to create a wide variety of outfits for everyday use.
@@ -11,7 +11,7 @@ Capsule wardrobe it's a collection of a few essential and versatile clothes that
 - Because it saves time. A capsule wardrobe is practical and functional, reflecting your lifestyles and taste, so you won't stay anymore in front of the closet thinking on what to wear.
 
 ## Getting Started
-Open [this link](#) and create an account. Next, upload images of the items you selected to compose your capsule wardrope and categorize them. From there, you will be able to create looks and classify them in a way that works better for you.
+Open [this link](https://agile-sea-56583.herokuapp.com/) and create an account. Next, upload images of the items you selected to compose your capsule wardrope and categorize them. From there, you will be able to create looks and classify them in a way that works better for you.
 
 ### Prerequisites
 - web browser
