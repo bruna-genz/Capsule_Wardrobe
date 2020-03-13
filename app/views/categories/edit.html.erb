@@ -1,0 +1,10 @@
+<div class="col-sm-6 col-sm-offset-3 mt-5 mx-auto">
+    <h2 class="text-center title-medium mt-5 mb-5">Edit category</h2>
+    <%= bootstrap_form_for @category do |f| %>
+        <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+
+        <%= f.text_field :name, placeholder: "name", class: 'pl-2' %>
+
+        <%= f.submit 'Save', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
+    <% end %>
+</div>

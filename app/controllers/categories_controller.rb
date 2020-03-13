@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+    before_action :get_category_by_id, only: [:edit, :update, :destroy]
     def new
         @category = Category.new
     end
@@ -14,8 +15,18 @@ class CategoriesController < ApplicationController
         end
     end
 
+    def edit
+    end
+
+    def update
+        if @category.update_attributes(category_params)
+            redirect_to posts_path
+        else
+            render 'edit'
+        end
+    end
+
     def destroy
-        @category = Category.find(params[:id])
         @category.destroy
         redirect_to posts_path
     end
@@ -24,5 +35,9 @@ class CategoriesController < ApplicationController
 
     def category_params
         params.require(:category).permit(:name)
+    end
+
+    def get_category_by_id
+        @category = Category.find(params[:id])
     end
 end

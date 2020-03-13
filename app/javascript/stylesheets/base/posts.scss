@@ -1,3 +1,5 @@
+@import '../base/variables.scss';
+
 .full-page {
   min-height: 90vh;
 }
@@ -45,6 +47,10 @@
   @media only screen and (max-device-width : 720px) {
     top: 127px;
   }
+}
+
+.simple-link {
+  color: $navbarColor;
 }
 
 #image-expand {
