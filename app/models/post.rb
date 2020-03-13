@@ -7,4 +7,6 @@ class Post < ApplicationRecord
     has_many :post_combinations
     has_many :combinations, through: :post_combinations
     has_one_attached :picture
+
+    default_scope -> { order(created_at: :desc) }
 end
