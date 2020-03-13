@@ -4,4 +4,6 @@ class Combination < ApplicationRecord
     belongs_to :user
     
     validates :name, presence: true
+
+    default_scope -> { order(created_at: :desc) }
 end

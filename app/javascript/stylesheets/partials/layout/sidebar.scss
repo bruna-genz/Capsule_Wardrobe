@@ -26,3 +26,10 @@
     justify-content: space-between;
   }
 }
+
+.name-link {
+  &:hover {
+    background-color: white !important;
+    text-decoration: none;
+  }
+}

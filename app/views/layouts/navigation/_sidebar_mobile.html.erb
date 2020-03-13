@@ -2,7 +2,7 @@
     <ul class="nav flex-column ml-3">
         <li class="nav-item d-flex justify-content-center ml-3 mr-2">
             <h1 class="title-small">
-                <%= link_to posts_path do %>
+                <%= link_to posts_path, class:'name-link' do %>
                     <% current_user.name %>
                 <% end %>
             </h1>

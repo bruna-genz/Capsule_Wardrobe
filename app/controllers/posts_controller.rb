@@ -1,6 +1,10 @@
 class PostsController < ApplicationController  
+  before_action :get_post_by_id, only: [:show, :edit, :update, :destroy]
   before_action :get_categories, only: [:new, :edit]
   before_action  :login_user 
+
+  def show
+  end
 
   def index
     @posts = params[:category_id] ? current_user.posts.where("category_id = ?", params[:category_id]) : current_user.posts.all 
@@ -26,11 +30,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end 
 
   def update
-    @post = Post.find(params[:id])
     if @post.update_attributes(posts_params)
       redirect_to posts_path
     else
@@ -39,7 +41,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end
@@ -48,6 +49,10 @@ class PostsController < ApplicationController
 
   def posts_params
     params.require(:post).permit(:category_id, :picture)
+  end
+
+  def get_post_by_id
+    @post = Post.find(params[:id])
   end
 
   def get_categories

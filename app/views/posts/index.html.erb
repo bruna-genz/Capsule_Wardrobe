@@ -3,7 +3,16 @@
         <h1 class="title-small mt-2 ml-sm-5 ml-2 mr-3">
             <%= get_category_name(params[:category_id]) %>
         </h1>
-    <%= delete_category(params[:category_id]) %>
+    
+    <% if params[:category_id] %>
+      <%= link_to edit_category_path(params[:category_id]), class: 'simple-link mr-2 pt-1' do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+      <%= link_to category_path(params[:category_id]), class: 'simple-link pt-1', method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    <% end %>
+
     </div>
     <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "ml-5 mt-3" ) if flash[:notice] %>
     
@@ -26,8 +35,19 @@
         <% @posts.each do |post| %>
             <li class="mx-1 mx-sm-4">
                 <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
-                    <%= link_to "Edit", edit_post_path(post), class:"btn btn-secondary btn-sm" %>
-                    <%= link_to "Delete", post_path(post), method: :delete, class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
+                    <span id="left-links" class="ml-2">
+                        <%= link_to edit_post_path(post), class:"btn btn-secondary" do %>
+                            <i class="fas fa-edit"></i>
+                        <% end %>
+                        <%= link_to post_path(post), method: :delete, class:"btn btn-secondary ml-sm-1",  data: { confirm: 'Are you sure?' } do %>
+                            <i class="far fa-trash-alt"></i>
+                        <% end %>
+                    </span>
+                    <span id="right-links">
+                        <%= link_to post, class:"btn btn-secondary mr-2" do %>
+                            <i class="fas fa-expand"></i>
+                        <% end %>
+                    </span>
                 </div>
             </li>
         <% end %>

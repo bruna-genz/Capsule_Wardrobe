@@ -7,18 +7,20 @@
             <% @items.each do |item| %>
                 <li class="mx-1 mx-sm-4">
                     <div style='background-image: url(<%=(url_for(item.picture)) %>)'>
-                        <%= link_to "Remove item", post_combination_path(:combination_id => @combination_id, :post_id => item.id), method: :delete,  class:"btn btn-secondary btn-sm",  data: { confirm: 'Are you sure?' } %>
+                        <%= link_to post_combination_path(:combination_id => @combination_id, :post_id => item.id), method: :delete,  class:"btn btn-secondary ml-2",  data: { confirm: 'Are you sure?' } do %>
+                            <i class="far fa-trash-alt"></i>
+                        <% end %>
                     </div>
                 </li>
             <% end %>
         </ul>
     <% end %>
-    <%= link_to show_options_path(:combination_id => @combination.id), class:"btn btn-outline-secondary text-body ml-4 mt-4 mb-3" do %>
+    <%= link_to show_options_path(:combination_id => @combination.id), class:"btn btn-outline-secondary ml-4 mt-4 mb-3" do %>
         Add items
-        <img src="https://img.icons8.com/metro/26/000000/plus.png">
+        <i class="fas fa-plus-circle"></i>
     <% end %>
-    <%= link_to "Delete look", combination_path(@combination), method: :delete,  class:"btn btn-outline-secondary text-body ml-4 mt-4 mb-3",  data: { confirm: 'Are you sure?' } %>
+    <%= link_to "Delete look", combination_path(@combination), method: :delete,  class:"btn btn-outline-secondary ml-4 mt-4 mb-3",  data: { confirm: 'Are you sure?' } %>
     <br/>
-    <%= link_to "Back", combinations_path, class:"btn btn-outline-secondary text-body ml-4" %>
+   <%= link_to "Back", combinations_path, class:"btn btn-outline-secondary ml-4" %> 
 </div>
   
