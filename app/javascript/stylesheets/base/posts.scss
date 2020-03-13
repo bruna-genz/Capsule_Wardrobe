@@ -12,6 +12,7 @@
     div {
       display: flex;
       align-items: flex-end;
+      justify-content: space-between;
       background-size: cover;
       width: 220px;
       height: 290px;
@@ -22,13 +23,16 @@
       }
       a {
         visibility: hidden;
-        margin: 0 0 15px 10px;
+        margin-bottom: 15px;
       }
       &:hover {
         a {
           visibility: visible;
         }
       }
+    }
+    .btn-sm {
+      font-size: 0.800rem !important;
     }
   }
 }
@@ -40,5 +44,28 @@
   font-size: 13px;
   @media only screen and (max-device-width : 720px) {
     top: 127px;
+  }
+}
+
+#image-expand {
+  display: flex;
+  align-items: flex-end;
+  width: 520px;
+  height: 720px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media only screen and (max-device-width : 720px) {
+    width: 360px;
+    height: 500px;
+  }
+  a {
+    visibility: hidden;
+    margin: 0 0 15px 10px;
+    font-size: 20px;
+  }
+  &:hover {
+    a {
+      visibility: visible;
+    }
   }
 }
