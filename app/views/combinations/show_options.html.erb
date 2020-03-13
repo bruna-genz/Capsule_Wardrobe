@@ -7,12 +7,12 @@
         <% @posts.each do |post| %>
             <li class="mx-1 mx-sm-4">
                 <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
-                    <%= link_to new_post_combination_path(:combination_id => params[:combination_id], :post_id => post.id), class:"btn btn-light" do %>
-                        <img src="https://img.icons8.com/metro/26/000000/plus.png">
+                    <%= link_to new_post_combination_path(:combination_id => params[:combination_id], :post_id => post.id), class:"btn btn-secondary ml-2" do %>
+                        <i class="fas fa-plus-circle"></i>
                     <% end %>
                 </div>
             </li>
         <% end %>
     </ul>
-    <%= link_to "Back", combinations_path, class:"btn btn-outline-secondary text-body ml-sm-4 ml-1 mt-4 mb-2" %>
+    <%= link_to "Back", combinations_path, class:"btn btn-outline-secondary ml-sm-4 ml-1 mt-4 mb-2" %>
 </div>

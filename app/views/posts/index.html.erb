@@ -36,11 +36,15 @@
             <li class="mx-1 mx-sm-4">
                 <div style='background-image: url(<%=(url_for(post.picture)) %>)'>
                     <span id="left-links" class="ml-2">
-                        <%= link_to "Edit", edit_post_path(post), class:"btn btn-secondary btn-sm" %>
-                        <%= link_to "Delete", post_path(post), method: :delete, class:"btn btn-secondary btn-sm ml-sm-1",  data: { confirm: 'Are you sure?' } %>
+                        <%= link_to edit_post_path(post), class:"btn btn-secondary" do %>
+                            <i class="fas fa-edit"></i>
+                        <% end %>
+                        <%= link_to post_path(post), method: :delete, class:"btn btn-secondary ml-sm-1",  data: { confirm: 'Are you sure?' } do %>
+                            <i class="far fa-trash-alt"></i>
+                        <% end %>
                     </span>
                     <span id="right-links">
-                        <%= link_to post, class:"btn btn-secondary btn-sm mr-2" do %>
+                        <%= link_to post, class:"btn btn-secondary mr-2" do %>
                             <i class="fas fa-expand"></i>
                         <% end %>
                     </span>
