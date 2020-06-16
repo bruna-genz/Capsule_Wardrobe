@@ -31,6 +31,7 @@ Open [this link](https://agile-sea-56583.herokuapp.com/) and create an account. 
 - Github: [@bruna-genz](https://github.com/bruna-genz)
 - Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
 - Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
+- Email: brunagenz92@gmail.com
 
 ## Show your support
 
