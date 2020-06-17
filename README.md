@@ -17,7 +17,7 @@
 - [Getting started](https://github.com/bruna-genz/Capsule_Wardrobe#getting-started)
 - [Installation](https://github.com/bruna-genz/Capsule_Wardrobe#installation)
   - [Prerequisites](https://github.com/bruna-genz/Capsule_Wardrobe#prerequisites)
-  - [Downloading and intalling steps](https://github.com/bruna-genz/Capsule_Wardrobe#downloading-and-intalling-steps)
+  - [Downloading and installing steps](https://github.com/bruna-genz/Capsule_Wardrobe#downloading-and-installing-steps)
 - [Author](https://github.com/bruna-genz/Capsule_Wardrobe#author)
 - [Future improvements](https://github.com/bruna-genz/Capsule_Wardrobe#future-improvements)
 - [Acknowledgments](https://github.com/bruna-genz/Capsule_Wardrobe#acknowledgements)
