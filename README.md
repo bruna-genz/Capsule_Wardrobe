@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-- [About the Project](https://github.com/bruna-genz/Capsule_Wardrobe#about-the-project)
+- [About the app](https://github.com/bruna-genz/Capsule_Wardrobe#about-the-app)
 - [About Capsule Wardrobe](https://github.com/bruna-genz/Capsule_Wardrobe#about-capsule-wardrobe)
   - [What is capsule wardrobe?](https://github.com/bruna-genz/Capsule_Wardrobe#what-is-capsule-wardrobe)
   - [Why does it matter?](https://github.com/bruna-genz/Capsule_Wardrobe#why-does-it-matter)
@@ -19,17 +19,17 @@
   - [Prerequisites](https://github.com/bruna-genz/Capsule_Wardrobe#prerequisites)
   - [Downloading and installing steps](https://github.com/bruna-genz/Capsule_Wardrobe#downloading-and-installing-steps)
 - [Author](https://github.com/bruna-genz/Capsule_Wardrobe#author)
-- [Future improvements](https://github.com/bruna-genz/Capsule_Wardrobe#future-improvements)
-- [Acknowledgments](https://github.com/bruna-genz/Capsule_Wardrobe#acknowledgements)
+- [Future features](https://github.com/bruna-genz/Capsule_Wardrobe#future-features)
+- [Show your support](https://github.com/bruna-genz/Capsule_Wardrobe#show-your-support)
 
-## About the Project
-Capsule Wardrobe is a virtual catalog where users can upload clothes pictures, classify them in lists and create personalized looks.
+## About the app
+Capsule Wardrobe is a virtual catalog where users can upload clothes pictures, classify them in lists, and create personalized looks.
 
 I created this project to join two of my interests: improving my Rails skills and having a more sustainable wardrobe. With the concept of Capsule Wardrobe in mind, I planned and designed an application that would help me in the process of building my own capsule wardrobe, taking into consideration my needs to create the app's features, such as adding personalized categories and the ability to create looks for future reference. During the creation of the app, I had to find solutions for some problems, such as finding an affordable way to store the images permanently.
 
 ## About Capsule Wardrobe
 ### What is capsule wardrobe?
-Capsule wardrobe it's a collection of a few essential and versatile clothes that don't go out of fashion. They can be mixed and matched to create a wide variety of outfits for everyday use. They can be mixed and matched to create a wide variety of outfits for everyday use.
+Capsule wardrobe it's a collection of a few essential and versatile clothes that don't go out of fashion. They can be mixed and matched to create a wide variety of outfits for everyday use. They can be mixed and matched to create a wide outfits variety for everyday use.
 
 ### Why does it matter?
 - Because it helps us protect the environment. The fashion industry is the second-largest polluter in the world, just after the oil industry.
@@ -38,13 +38,13 @@ Capsule wardrobe it's a collection of a few essential and versatile clothes that
 
 ## Preview
 
-### Home page
+#### Home page
 ![img](./app/assets/images/CW-home.png)
 
-### Looks
+#### Looks
 ![img](./app/assets/images/CW-looks.png)
 
-### New clothes form
+#### New clothes form
 ![img](./app/assets/images/CW-new-clothes.png)
 
 ## Built With
@@ -56,7 +56,7 @@ Capsule wardrobe it's a collection of a few essential and versatile clothes that
 - Ruby on Rails;
 
 ## Getting Started
-Open [this link](https://agile-sea-56583.herokuapp.com/) and create an account. Next, upload images of the items you selected to compose your capsule wardrope and categorize them. From there, you will be able to create looks and classify them in a way that works better for you.
+Open [this link](https://agile-sea-56583.herokuapp.com/) and create an account. Next, upload images of the items you selected to compose your capsule wardrobe and categorize them. From there, you will be able to create looks and classify them in a way that works better for you.
 
 ## Installation 
 
@@ -102,6 +102,12 @@ rails server
 - Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
 - Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
 - Email: brunagenz92@gmail.com
+
+## Future features
+
+- Create temperature categories on the created looks and integrate the app with a weather API, so it can suggest looks based on the current temperature.
+- Create a virtual shop, where users can sell their clothes to other users.
+
 
 ## Show your support
 
