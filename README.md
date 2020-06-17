@@ -3,7 +3,7 @@
   <a href="logo"><img src="./app/assets/images/CW-logo.png" width="200"></a>
 </h1>
 
-<h4 align="center">Practicality and sustainability without losing style.</h4>
+<p align="center">Practicality and sustainability without losing style.</p>
 <h4 align="center"><a href="https://agile-sea-56583.herokuapp.com/">Start now >></a></h4>
 
 ## Table of Contents
@@ -37,6 +37,15 @@ Capsule wardrobe it's a collection of a few essential and versatile clothes that
 - Because it saves time. A capsule wardrobe is practical and functional, reflecting your lifestyles and taste, so you won't stay anymore in front of the closet thinking on what to wear.
 
 ## Preview
+
+### Home page
+![img](./app/assets/images/CW-home.png)
+
+### Looks
+![img](./app/assets/images/CW-looks.png)
+
+### New clothes form
+![img](./app/assets/images/CW-new-clothes.png)
 
 ## Built With
 
