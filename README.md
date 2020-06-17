@@ -72,7 +72,7 @@ To install a local version of this project, follow these steps:
 - Clone the repository running the following command: 
 
 ```
-git clone git@github.com:bruna-genz/facebook_clone.git
+git clone https://github.com/bruna-genz/Capsule_Wardrobe.git
 ```
 
 - Open the project's folder on your text editor and install the required gems by running:
