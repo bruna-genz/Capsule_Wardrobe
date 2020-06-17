@@ -8,19 +8,19 @@
 
 ## Table of Contents
 
-- [About the Project](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#about-the-project)
-- [About Capsule Wardrobe]()
-  - [What is capsule wardrobe?]()
-  - [Why does it matter?]()
-- [Preview](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#preview)
-- [Built with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#built-with)
-- [Getting started]()
-- [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
-  - [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
-  - [Downloading and intalling steps](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#downloading-and-intalling-steps)
-- [Author](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#author)
-- [Future improvements](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#future-improvements)
-- [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgements)
+- [About the Project](https://github.com/bruna-genz/Capsule_Wardrobe#about-the-project)
+- [About Capsule Wardrobe](https://github.com/bruna-genz/Capsule_Wardrobe#about-capsule-wardrobe)
+  - [What is capsule wardrobe?](https://github.com/bruna-genz/Capsule_Wardrobe#what-is-capsule-wardrobe)
+  - [Why does it matter?](https://github.com/bruna-genz/Capsule_Wardrobe#why-does-it-matter)
+- [Preview](https://github.com/bruna-genz/Capsule_Wardrobe#preview)
+- [Built with](https://github.com/bruna-genz/Capsule_Wardrobe#built-with)
+- [Getting started](https://github.com/bruna-genz/Capsule_Wardrobe#getting-started)
+- [Installation](https://github.com/bruna-genz/Capsule_Wardrobe#installation)
+  - [Prerequisites](https://github.com/bruna-genz/Capsule_Wardrobe#prerequisites)
+  - [Downloading and intalling steps](https://github.com/bruna-genz/Capsule_Wardrobe#downloading-and-intalling-steps)
+- [Author](https://github.com/bruna-genz/Capsule_Wardrobe#author)
+- [Future improvements](https://github.com/bruna-genz/Capsule_Wardrobe#future-improvements)
+- [Acknowledgments](https://github.com/bruna-genz/Capsule_Wardrobe#acknowledgements)
 
 ## About the Project
 Capsule Wardrobe is a virtual catalog where users can upload clothes pictures, classify them in lists and create personalized looks.
