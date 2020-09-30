@@ -106,7 +106,7 @@ rails server
 ## Future features
 
 - Create temperature categories on the created looks and integrate the app with a weather API, so it can suggest looks based on the current temperature.
-- Create a virtual shop, where users can sell their clothes to other users.
+- Create an ecommerce store, where users can sell their clothes to other users.
 
 
 ## Show your support
